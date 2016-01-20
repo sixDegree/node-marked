@@ -17,6 +17,9 @@ renderer.toc=function(datas){
     tocStr+="<li>"+indentStr+"<a href='#"+id+"'>"+item.text+"</a></li>";
   }
   return "<ul class='toc'>"+tocStr+"</ul>";
+};
+renderer.codespan=function(text){
+	return '<code class="inline-code">' + text + '</code>';
 }
 
 marked.setOptions({
