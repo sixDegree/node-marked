@@ -1,0 +1,26 @@
+{
+  "name": "node-marked",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "cj"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "markdown"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "MathJax": "~2.6.0",
+    "highlight": "8.9"
+  }
+}
