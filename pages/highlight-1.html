@@ -7,8 +7,7 @@
 </head>
 <body>
 	<hr>
-<p>title: Markdown Test Article
-tags: web,sass</p>
+<p>title: Markdown Test Article<br>tags: web,sass</p>
 <h2 id="description-this-is-markdown-test-article">description: This is Markdown Test Article</h2>
 <h1 id="markdown-test-article">Markdown Test Article</h1>
 <p>[TOC]</p>
@@ -20,18 +19,12 @@ Hello
 sdjfioe
 </pre>
 
-<p>
-dfjieowifoenwfjwenf
-sdfnjenjk
-</p>
+<p><br>dfjieowifoenwfjwenf<br>sdfnjenjk<br></p>
 
 <p><b>dfe</b></p>
 <p>Do <code>Hello</code> Test</p>
 <p><a>sdfe</a></p>
-<ul style="list-style:none">
-    <li>Hello</li>
-    <li>Welcome</li>
-</ul>
+<ul style="list-style:none"><br>    <li>Hello</li><br>    <li>Welcome</li><br></ul>
 
 <h3 id="inline">Inline</h3>
 <blockquote>
@@ -74,10 +67,14 @@ sdfnjenjk
 <li>We 3</li>
 </ul>
 </li>
+</ul>
+<ul>
 <li>T1<ul>
 <li>F1</li>
 </ul>
 </li>
+</ul>
+<ul>
 <li>T2</li>
 </ul>
 </li>
@@ -131,6 +128,16 @@ sdfnjenjk
 </tr>
 </tbody>
 </table>
+<ul>
+<li>list</li>
+<li><p>table in list</p>
+<p>| Header |<br>| ------ |<br>| Cell   |</p>
+</li>
+<li><p>table without leading pipe<br>Header 1 | Header 2<br>-------- | --------<br>Cell 1   | Cell 2</p>
+</li>
+<li><p>table<br>| Header |<br>| ------ |<br>| Cell   |</p>
+</li>
+</ul>
 <h3 id="break">Break</h3>
 <p>Page Break</p>
 <hr>
@@ -305,19 +312,9 @@ public abstract class L2Character extends L2Object {
 <p>  //中文效果</p>
 <p>  $(x_i, y_i)$</p>
 <p>  [\frac{{ - b \pm \sqrt {{b^2} - 4ac} }}{{2a}}]</p>
-<p>  When $a \ne 0$, there are two solutions to (ax^2 + bx + c = 0) and they are
-  $x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$</p>
+<p>  When $a \ne 0$, there are two solutions to (ax^2 + bx + c = 0) and they are<br>  $x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$</p>
 <h3 id="latex-p-tag">LaTex + <code>p</code> tag</h3>
-<p>
-  //中文效果
-
-  $(x_i, y_i)$
-
-  [\frac{{ - b \pm \sqrt {{b^2} - 4ac} }}{{2a}}]
-
-  When $a \ne 0$, there are two solutions to (ax^2 + bx + c = 0) and they are
-  $x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$
-</p>
+<p><br>  //中文效果<br><br>  $(x_i, y_i)$<br><br>  [\frac{{ - b \pm \sqrt {{b^2} - 4ac} }}{{2a}}]<br><br>  When $a \ne 0$, there are two solutions to (ax^2 + bx + c = 0) and they are<br>  $x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$<br></p>
 
 <h3 id="latex-pre-tag">LaTex + <code>pre</code> tag</h3>
 <pre>

@@ -249,7 +249,8 @@ Lexer.prototype.token = function(src, top, bq) {
     }
 
     // table no leading pipe (gfm)
-    if (top && (cap = this.rules.nptable.exec(src))) {
+    //if (top && (cap = this.rules.nptable.exec(src))) {
+    if (cap = this.rules.nptable.exec(src)) {   // for table in list -- update by cj
       src = src.substring(cap[0].length);
 
       item = {
@@ -421,7 +422,8 @@ Lexer.prototype.token = function(src, top, bq) {
     }
 
     // table (gfm)
-    if (top && (cap = this.rules.table.exec(src))) {
+    //if (top && (cap = this.rules.table.exec(src))) {
+    if (cap = this.rules.table.exec(src)) { // for table in list -- update by cj
       src = src.substring(cap[0].length);
 
       item = {
@@ -483,8 +485,8 @@ Lexer.prototype.token = function(src, top, bq) {
     }
   }
 
-  //added by cj -- for [TOC]
-  if(tocIndex>=0){
+  //added by cj -- for [TOC]/heading
+  if(tocIndex>=0 || this.options.reHeader){
     var toc=[];
     for(var i=0;i<this.tokens.length;i++){
       if(this.tokens[i].type==='heading'){
@@ -914,7 +916,10 @@ Renderer.prototype.paragraph = function(text) {
 };
 
 Renderer.prototype.table = function(header, body) {
-  return '<table>\n'
+  return '<table'
+    +(this.options.tableClass?' class="'+this.options.tableClass+'"':'')
+    //+ this.options.tableClass?' class="'+this.options.tableClass+'"':''
+    +'>\n'
     + '<thead>\n'
     + header
     + '</thead>\n'
